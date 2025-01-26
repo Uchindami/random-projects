@@ -34,7 +34,6 @@ def extract_data(database_element):
                     p.text for p in paragraphs if p.text != title]
                 paragraph = " ".join(paragraph_texts)
 
-                # Append extracted data
                 data.append({
                     "Country name": country_name,
                     "Month and year": month_year,
@@ -57,7 +56,7 @@ def save_to_json(data, file_path):
 
 
 def main():
-    """Main function to execute the script."""
+    """Main function"""
     driver = None
     try:
         # Initialize WebDriver
