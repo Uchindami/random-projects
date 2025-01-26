@@ -9,9 +9,11 @@ URL = "https://www.crisisgroup.org/crisiswatch/database?location%5B%5D=122&locat
 OUTPUT_FILE = "data.json"
 WAIT_TIMEOUT = 10
 
+
 def initialize_driver():
     """Initialize and return the Selenium WebDriver."""
     return webdriver.Chrome()
+
 
 def extract_data(database_element):
     """Extract data from the database element."""
@@ -28,7 +30,8 @@ def extract_data(database_element):
             for entry in group.find_elements(By.CLASS_NAME, "o-crisis-states__detail"):
                 title = entry.find_element(By.TAG_NAME, "strong").text
                 paragraphs = entry.find_elements(By.TAG_NAME, "p")
-                paragraph_texts = [p.text for p in paragraphs if p.text != title]
+                paragraph_texts = [
+                    p.text for p in paragraphs if p.text != title]
                 paragraph = " ".join(paragraph_texts)
 
                 # Append extracted data
@@ -42,6 +45,7 @@ def extract_data(database_element):
             print(f"Error extracting data from a group: {e}")
     return data
 
+
 def save_to_json(data, file_path):
     """Save extracted data to a JSON file."""
     try:
@@ -50,6 +54,7 @@ def save_to_json(data, file_path):
         print(f"Data successfully saved to {file_path}")
     except Exception as e:
         print(f"Error saving data to JSON: {e}")
+
 
 def main():
     """Main function to execute the script."""
@@ -61,7 +66,8 @@ def main():
 
         # Wait for the database element to load
         wait = WebDriverWait(driver, WAIT_TIMEOUT)
-        database_element = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cw-database")))
+        database_element = wait.until(
+            EC.presence_of_element_located((By.CLASS_NAME, "cw-database")))
 
         # Extract data
         data = extract_data(database_element)
@@ -79,6 +85,7 @@ def main():
         # Close the WebDriver
         if driver:
             driver.quit()
+
 
 if __name__ == "__main__":
     main()
