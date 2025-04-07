@@ -4,11 +4,13 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"regexp"
 	"strings"
 
 	"golang.org/x/net/html"
 )
 
+// Extract raw text from HTML node
 func extractText(n *html.Node) string {
 	if n.Type == html.TextNode {
 		return n.Data
@@ -20,6 +22,7 @@ func extractText(n *html.Node) string {
 	return sb.String()
 }
 
+// Find main content in <main> or <article> tags
 func findMainContentNode(n *html.Node, tags []string) *html.Node {
 	var match *html.Node
 	var f func(*html.Node)
@@ -40,10 +43,10 @@ func findMainContentNode(n *html.Node, tags []string) *html.Node {
 	return match
 }
 
+// Fallback: Find <div> with most text
 func findLargestTextDiv(n *html.Node) *html.Node {
 	var best *html.Node
 	maxLen := 0
-
 	var f func(*html.Node)
 	f = func(n *html.Node) {
 		if n.Type == html.ElementNode && n.Data == "div" {
@@ -61,6 +64,31 @@ func findLargestTextDiv(n *html.Node) *html.Node {
 	return best
 }
 
+// Clean up text for LLMs: removes junk and normalizes spacing
+func cleanText(text string) string {
+	// Remove excessive whitespace and line breaks
+	text = strings.ReplaceAll(text, "\t", " ")
+	text = strings.ReplaceAll(text, "\r", "")
+	text = regexp.MustCompile(`\s+`).ReplaceAllString(text, " ")
+
+	// Break into sentences more cleanly
+	text = regexp.MustCompile(`([.!?])\s+`).ReplaceAllString(text, "$1\n")
+
+	// Remove nav/footer junk phrases
+	junk := []string{
+		"Post navigation", "Share this:", "Follow us", "Related Posts",
+	}
+	for _, phrase := range junk {
+		text = strings.ReplaceAll(text, phrase, "")
+	}
+
+	// Trim outer spaces
+	text = strings.TrimSpace(text)
+
+	return text
+}
+
+// Fetch and extract cleaned text from a webpage
 func extractMainTextFromURL(url string) (string, error) {
 	resp, err := http.Get(url)
 	if err != nil {
@@ -79,21 +107,20 @@ func extractMainTextFromURL(url string) (string, error) {
 
 	mainTags := []string{"main", "article"}
 	mainNode := findMainContentNode(doc, mainTags)
-
 	if mainNode == nil {
 		mainNode = findLargestTextDiv(doc)
 	}
-
 	if mainNode == nil {
 		return "", fmt.Errorf("could not find main content")
 	}
 
-	text := strings.TrimSpace(extractText(mainNode))
-	return text, nil
+	rawText := extractText(mainNode)
+	cleanedText := cleanText(rawText)
+	return cleanedText, nil
 }
 
 func main() {
-	url := "https://jobsearchmalawi.com/job/sales-analyst-2/" // Replace with your desired URL
+	url := "https://jobsearchmalawi.com/job/data-entry-clerks-8/" // Replace this
 	text, err := extractMainTextFromURL(url)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "Error:", err)
@@ -107,5 +134,5 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("Main content saved to", fileName)
+	fmt.Println("Cleaned main content saved to", fileName)
 }
