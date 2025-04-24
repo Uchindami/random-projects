@@ -1,6 +1,60 @@
 --- Page 1 ---
-Manfred ChiramboManfred ChiramboEmail:Email: manfredchirambojz@gmail.comPhone:Phone: (+265) 885 624 718Location:Location: Blantyre, MalawiPortfolio:Portfolio: uchindami.vercel.appLinkedIn:LinkedIn: linkedin.com/in/manfred-chiramboGitHub:GitHub: github.com/UchindamiProfileProfileDetail-oriented data and software engineer with strong ICT, data management, and reporting experience. Demonstrated success in data capture, aggregation, andvisualization using tools like Excel and PowerBI. Skilled in training field staff, maintaining databases, and working in fast-paced environments. Passionate aboutapplying tech to improve healthcare data systems in rural communities.EducationEducationBachelor’s in Information Communication Technology (ICT)Bachelor’s in Information Communication Technology (ICT)Major in Software EngineeringDaeyang University — Lilongwe, Malawi (2024)SkillsSkillsData Management:Data Management: PowerBI, Excel, MySQLICT Support:ICT Support: Windows, Linux, AngazaProgramming:Programming: Python, R, JavaScript, ReactReporting & Visualization:Reporting & Visualization: PowerBI DashboardsLanguages:Languages: Fluent in EnglishCertifications:Certifications: IBM Machine Learning, AWS Cloud, Meta Front-EndRelevant ExperienceRelevant ExperienceUnicef (EMOPS, RAPS Section)Unicef (EMOPS, RAPS Section) —  — RemoteRemoteData Science & AI/ML InternData Science & AI/ML Intern (Jan 2025 – Feb 2025)Developed and maintained a comprehensive data aggregation databaseAutomated unstructured data scraping from multiple platformsVisualized critical health indicators using PowerBIEnsured integration with GeoSight for geospatial analysisQubix RoboticsQubix Robotics —  — Blantyre, MalawiBlantyre, MalawiSoftware Engineer / AI Bootcamp InstructorSoftware Engineer / AI Bootcamp Instructor (Aug 2024 – Present)Maintained databases and internal applicationsProduced monthly reports and dashboards using PowerBISupported health data training in AI workshopsZuwa EnergyZuwa Energy —  — Lilongwe, MalawiLilongwe, MalawiInformation Technology InternInformation Technology Intern (Jan 2022 – Apr 2023)Trained field workers in tech systems and reportingCreated internal reporting softwareMaintained and supported ICT systems across multiple sitesVolunteeringVolunteeringChildren Uplift — Daeyang Mission ChurchChildren Uplift — Daeyang Mission ChurchOrganized education programs and tracked progress of youth in rural settings (2019–2023)
+
+Manfred Chirambo
+
+Email: manfredchirambojz@gmail.com
+Phone: (+265) 885 624 718
+Location: Blantyre, Malawi
+Portfolio: uchindami.vercel.app
+LinkedIn: linkedin.com/in/manfred-chirambo
+GitHub: github.com/Uchindami
+
+Profile
+Detail-oriented data and software engineer with strong ICT, data management, and reporting experience. Demonstrated success in data capture, aggregation, and visualization using tools like Excel and PowerBI. Skilled in training field staff, maintaining databases, and working in fast-paced environments. Passionate about applying tech to improve healthcare data systems in rural communities.
+
+Education
+Bachelor’s in Information Communication Technology (ICT)
+    - Major in Software Engineering
+    - Daeyang University — Lilongwe, Malawi (2024)
+
+Skills
+- Data Management: PowerBI, Excel, MySQL
+- ICT Support: Windows, Linux, Angaza
+- Programming: Python, R, JavaScript, React
+- Reporting & Visualization: PowerBI Dashboards
+- Languages: Fluent in English
+- Certifications: IBM Machine Learning, AWS Cloud, Meta Front-End
+
+Relevant Experience
+
+Unicef (EMOPS, RAPS Section) — Remote
+Data Science & AI/ML Intern (Jan 2025 – Feb 2025)
+- Developed and maintained a comprehensive data aggregation database
+- Automated unstructured data scraping from multiple platforms
+- Visualized critical health indicators using PowerBI
+- Ensured integration with GeoSight for geospatial analysis
+
+Qubix Robotics — Blantyre, Malawi
+Software Engineer / AI Bootcamp Instructor (Aug 2024 – Present)
+- Maintained databases and internal applications
+- Produced monthly reports and dashboards using PowerBI
+- Supported health data training in AI workshops
+
+Zuwa Energy — Lilongwe, Malawi
+Information Technology Intern (Jan 2022 – Apr 2023)
+- Trained field workers in tech systems and reporting
+- Created internal reporting software
+- Maintained and supported ICT systems across multiple sites
+
+Volunteering
+
+Children Uplift — Daeyang Mission Church
+- Organized education programs and tracked progress of youth in rural settings (2019–2023)
 
 --- Page 2 ---
-ReferencesReferencesSanga KanthemaSanga Kanthema — CEO, Qubix Robotics: sanga@qubixrobotics.comNadia NoumriNadia Noumri — UNICEF Emergency Specialist: snnoumri@unicef.orgJacqueline GondweJacqueline Gondwe — HR Manager (ex-Zuwa): kgondwe@camfed.org
 
+References
+
+Sanga Kanthema — CEO, Qubix Robotics: sanga@qubixrobotics.com
+Nadia Noumri — UNICEF Emergency Specialist: snnoumri@unicef.org
+Jacqueline Gondwe — HR Manager (ex-Zuwa): kgondwe@camfed.org
