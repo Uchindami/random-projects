@@ -120,7 +120,7 @@ func extractMainTextFromURL(url string) (string, error) {
 }
 
 func main() {
-	url := "https://jobsearchmalawi.com/job/ui-ux-developer/" // Replace this
+	url := "https://ntchito.com/jobs-in-malawi/" // Replace this
 	text, err := extractMainTextFromURL(url)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "Error:", err)
